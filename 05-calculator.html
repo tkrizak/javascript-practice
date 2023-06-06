@@ -1,40 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <style>
-      button {
-        margin: 5px;
-      }
-    </style>
-  </head>
+<html>
+  <head></head>
   <body>
     <p>
       <button
         onclick="
-        calculation += '1';
-        console.log(calculation);"
+        updateCalculation('1');
+      "
       >
-        1</button
-      ><button
+        1
+      </button>
+
+      <button
         onclick="
-        calculation += '2';
-        console.log(calculation);"
+        updateCalculation('2');
+      "
       >
-        2</button
-      ><button
+        2
+      </button>
+
+      <button
         onclick="
-        calculation += '3';
-        console.log(calculation);"
+        updateCalculation('3');
+      "
       >
-        3</button
-      ><button
+        3
+      </button>
+
+      <button
         onclick="
-        calculation += ' + ';
-        console.log(calculation);"
+        updateCalculation(' + ');
+      "
       >
         +
       </button>
@@ -43,26 +39,32 @@
     <p>
       <button
         onclick="
-        calculation += '4';
-        console.log(calculation);"
+        updateCalculation('4');
+      "
       >
-        4</button
-      ><button
+        4
+      </button>
+
+      <button
         onclick="
-        calculation += '5';
-        console.log(calculation);"
+        updateCalculation('5');
+      "
       >
-        5</button
-      ><button
+        5
+      </button>
+
+      <button
         onclick="
-        calculation += '6';
-        console.log(calculation);"
+        updateCalculation('6');
+      "
       >
-        6</button
-      ><button
+        6
+      </button>
+
+      <button
         onclick="
-        calculation += ' - ';
-        console.log(calculation);"
+        updateCalculation(' - ');
+      "
       >
         -
       </button>
@@ -71,26 +73,32 @@
     <p>
       <button
         onclick="
-        calculation += '7';
-        console.log(calculation);"
+        updateCalculation('7');
+      "
       >
-        7</button
-      ><button
+        7
+      </button>
+
+      <button
         onclick="
-        calculation += '8';
-        console.log(calculation);"
+        updateCalculation('8');
+      "
       >
-        8</button
-      ><button
+        8
+      </button>
+
+      <button
         onclick="
-        calculation += '9';
-        console.log(calculation);"
+        updateCalculation('9');
+      "
       >
-        9</button
-      ><button
+        9
+      </button>
+
+      <button
         onclick="
-        calculation += ' * ';
-        console.log(calculation);"
+        updateCalculation(' * ');
+      "
       >
         *
       </button>
@@ -99,37 +107,45 @@
     <p>
       <button
         onclick="
-        calculation += '0';
-        console.log(calculation);"
+        updateCalculation('0');
+      "
       >
-        0</button
-      ><button
+        0
+      </button>
+
+      <button
         onclick="
-        calculation += '.';
-        console.log(calculation);"
+        updateCalculation('.');
+
+      "
       >
         .
       </button>
+
       <button
         onclick="
-        calculation = eval(caltulation);
+        calculation = eval(calculation);
         console.log(calculation);
-    "
+      "
       >
         =
       </button>
+
       <button
         onclick="
-        calculation += ' / ';
-        console.log(calculation);"
-      ></button>
+        updateCalculation(' / ');
+      "
+      >
+        /
+      </button>
     </p>
 
     <p>
       <button
         onclick="
         calculation = '';
-        console.log(calculation);"
+        console.log(calculation);
+      "
       >
         Clear
       </button>
@@ -137,6 +153,11 @@
 
     <script>
       let calculation = '';
+
+      function updateCalculation(value) {
+        calculation = calculation + value;
+        console.log(calculation);
+      }
     </script>
   </body>
 </html>
