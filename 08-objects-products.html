@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects products practice</title>
+  </head>
+  <body>
+    <script>
+      const basketballProduct = {
+        name: 'basketball',
+        price: 2095,
+        'delivery-time': '3 days',
+      };
+
+      console.log(basketballProduct);
+
+      basketballProduct.price += 500;
+      console.log(basketballProduct);
+
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1;
+        } else {
+          return product2;
+        }
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095,
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 1095,
+      };
+
+      function isSameProduct(product3, product4) {
+        if (
+          product3.name === product4.name &&
+          product3.price === product4.price
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      const product3 = {
+        name: 'pants',
+        price: 1500,
+      };
+
+      const product4 = {
+        name: 'shirt',
+        price: 1100,
+      };
+
+      const product5 = {
+        name: 'pants',
+        price: 1500,
+      };
+
+      console.log(isSameProduct(product3, product4));
+      console.log(isSameProduct(product3, product5));
+
+      let text1 = 'I am a BIG text';
+      let lowerCaseText = text1.toLowerCase();
+      console.log(lowerCaseText);
+
+      let text2 = 'Hello';
+      let repeatText2 = text2.repeat(5);
+
+      console.log(repeatText2);
+    </script>
+  </body>
+</html>
