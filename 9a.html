@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9 practice</title>
+  </head>
+  <body>
+    <button
+      class="js-heads-button"
+      onclick="document.querySelector('.choice').innerHTML = 'You chose: heads';"
+    >
+      heads
+    </button>
+    <button
+      class="js-tails-button"
+      onclick="document.querySelector('.choice').innerHTML = 'You chose: tails';"
+    >
+      tails
+    </button>
+    <p class="choice"></p>
+
+    <input
+      placeholder="Name"
+      class="js-name-input"
+      onkeydown="
+      if (event.key === 'Enter') {
+        displayMessage();
+      }
+    "
+    />
+
+    <button
+      onclick="
+    displayMessage();
+  "
+    >
+      Submit
+    </button>
+
+    <p class="js-message"></p>
+
+    <script>
+      function displayMessage() {
+        const inputElement = document.querySelector('.js-name-input');
+        document.querySelector(
+          '.js-message'
+        ).innerHTML = `Your name is: ${inputElement.value}`;
+      }
+    </script>
+  </body>
+</html>
