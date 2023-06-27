@@ -77,13 +77,17 @@
     <p class="js-error-message error-message"></p>
 
     <script>
-      String(25);
-      console.log('25' - 5);
-      console.log('25' + 5);
+      function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button');
 
-      window.document;
-      window.console.log('window');
-      window.alert;
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerHTML = 'Subscribed';
+          buttonElement.classList.add('is-subscribed');
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed');
+        }
+      }
 
       function handleCostKeydown(event) {
         if (event.key === 'Enter') {
@@ -109,18 +113,6 @@
         }
 
         document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
-      }
-
-      function subscribe() {
-        const buttonElement = document.querySelector('.js-subscribe-button');
-
-        if (buttonElement.innerText === 'Subscribe') {
-          buttonElement.innerHTML = 'Subscribed';
-          buttonElement.classList.add('is-subscribed');
-        } else {
-          buttonElement.innerHTML = 'Subscribe';
-          buttonElement.classList.remove('is-subscribed');
-        }
       }
     </script>
   </body>
