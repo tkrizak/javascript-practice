@@ -12,17 +12,15 @@
     </style>
   </head>
   <body>
-    <button class="js-button" onclick="changeButton();">Start</button>
+    <button class="js-button">Start</button>
     <div>
-      <button class="cart-add js-cart-add" onclick="cartAddParagraph();">
-        Add to cart
-      </button>
+      <button class="cart-add js-cart-add">Add to cart</button>
     </div>
     <p class="js-added"></p>
 
     <script>
       /* 12a */
-      const add = function () {
+      const add = () => {
         console.log(2 + 3);
       };
 
@@ -36,7 +34,7 @@
         fun();
       }
 
-      runTwice(function () {
+      runTwice(() => {
         console.log('12b');
       });
 
@@ -44,19 +42,23 @@
 
       /* 12c+d */
 
-      function changeButton() {
+      document.querySelector('.js-button').addEventListener('click', () => {
         const button = document.querySelector('.js-button');
 
-        button.innerHTML = 'Loading...';
-
-        setTimeout(function () {
-          button.innerHTML = 'Finished';
-        }, 2000);
-      }
+        // The function below was changed
+        // to an arrow function.
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      });
 
       /* 12e+f */
 
       let timeoutId;
+
+      const addToCartElement = document.querySelector('.js-cart-add');
+
+      addToCartElement.addEventListener('click', cartAddParagraph);
 
       function cartAddParagraph() {
         const addMessage = document.querySelector('.js-added');
@@ -64,7 +66,7 @@
 
         clearTimeout(timeoutId);
 
-        timeoutId = setTimeout(function () {
+        timeoutId = setTimeout(() => {
           addMessage.innerHTML = '';
         }, 2000);
       }
